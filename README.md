@@ -1,0 +1,2 @@
+# DeEdger
+Uninstalls Microsoft Edge
