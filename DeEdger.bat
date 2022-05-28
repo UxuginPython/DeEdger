@@ -5,9 +5,7 @@ echo This program will uninstall Microsoft Edge.
 echo Make sure to run it with administrator privliges.
 pause
 taskkill /f /im msedge.exe
-taskkill /f /im msteams.exe
-cd "C:\Program Files (x86)\Microsoft"
-del Edge
-del EdgeCore
-del EdgeUpdate
+Remove-Item "C:\Program Files (x86)\Microsoft\Edge"
+Remove-Item "C:\Program Files (x86)\Microsoft\EdgeCore"
+Remove-Item "C:\Program Files (x86)\Microsoft\EdgeUpdate"
 pause
