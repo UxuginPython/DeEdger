@@ -1,8 +1,13 @@
-:: UxuginPython DeEdger 1.0.0
+:: UxuginPython DeEdger 1.1.0-InDev
 @echo off
-set /p VERSION="What version of Edge is installed? > "
-:: C:.\"Program Files (x86)"\Microsoft\Edge\Application\%VERSION%\Installer\setup.exe --uninstall --system-level --verbose-logging --force-uninstall
-cd C:\"Program Files (x86)"\Microsoft\Edge\Application\%VERSION%\Installer
-.\setup.exe --uninstall --system-level --verbose-logging --force-uninstall
-:: echo "Edge should now be uninstalled. If Edge remains on you system, please file a bug report on GitHub: https://github.com/UxuginPython/DeEdger/issues/new"
+echo UxuginPython DeEdger 1.0.0-InDev
+echo This program will uninstall Microsoft Edge.
+echo Make sure to run it with administrator privliges.
+pause
+taskkill /f /im msedge.exe
+taskkill /f /im msteams.exe
+cd "C:\Program Files (x86)\Microsoft"
+del Edge
+del EdgeCore
+del EdgeUpdate
 pause
